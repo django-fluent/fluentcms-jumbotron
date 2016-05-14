@@ -1,0 +1,8 @@
+{# based on http://getbootstrap.com/components/#jumbotron #}
+<div class="jumbotron">
+  <div class="container">
+    <h1>{{ instance.title }}</h1>
+    {{ instance.content|safe }}
+    {% if instance.button_url %}<p><a class="btn btn-primary btn-lg" href="{{ instance.button_url }}" role="button">{{ instance.button_title }}</a></p>{% endif %}
+  </div>
+</div>

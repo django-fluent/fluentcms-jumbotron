@@ -1,6 +1,7 @@
 from django.template import Template, Context
 from django.test import TestCase, override_settings, RequestFactory
 from django.utils.html import strip_tags
+from django.utils.text import slugify
 from fluent_contents.models import Placeholder
 
 from fluentcms_jumbotron.models import JumbotronItem
@@ -27,7 +28,7 @@ class JumbotronTests(TestCase):
         """
         Default jumbotron rendering
         """
-        page1 = self.create_page(slug='page1', title="Hello", content="<p>test</p>", button_url='http://example.org/', button_title="GO")
+        page1 = self.create_page(slug='page1', title="Hello", content="<p>test</p>", button1_url='http://example.org/', button1_title="GO")
 
         template = Template('{% load fluent_contents_tags %}{% page_placeholder "content" %}')
         request = RequestFactory().get("/", HTTP_HOST='example.org')
@@ -40,5 +41,5 @@ class JumbotronTests(TestCase):
     <p><a class="btn btn-primary btn-lg" href="http://example.org/" role="button">GO</a></p>
   </div>
 </div>'''
-        self.assertEqual(strip_tags(html).strip(), 'Hello\n    test\n    GO')
-        self.assertEqual(html.strip(), expected)
+        self.assertEqual(slugify(strip_tags(html)), 'hello-test-go')
+        self.assertHTMLEqual(html.strip(), expected)

@@ -18,7 +18,10 @@ class JumbotronPlugin(ContentPlugin):
         (None, {
             'fields': ('title', 'content'),
         }),
-        (_("Button"), {
-            'fields': ('button_title', 'button_url'),
+        (_("Buttons"), {
+            'fields': (
+                ('button1_title', 'button2_title'),
+                ('button1_url', 'button2_url'),
+            ),
         }),
     )

@@ -16,8 +16,11 @@ class JumbotronItem(ContentItem):
     """
     title = models.CharField(_("Title"), max_length=200)
     content = PluginHtmlField(_("Content"))  # TODO: replace with child elements later?
-    button_title = models.CharField(_("Button Title"), max_length=200, blank=True, null=True)
-    button_url = PluginUrlField(_("Button URL"), blank=True, null=True)
+    button1_title = models.CharField(_("Button 1 Title"), max_length=200, blank=True, null=True)
+    button1_url = PluginUrlField(_("Button 1 URL"), blank=True, null=True)
+
+    button2_title = models.CharField(_("Button 2 Title"), max_length=200, blank=True, null=True)
+    button2_url = PluginUrlField(_("Button 2 URL"), blank=True, null=True)
 
     class Meta:
         verbose_name = _("Jumbotron")

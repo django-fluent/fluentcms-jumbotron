@@ -54,8 +54,7 @@ The jumbotron is rendered with the HTML that Bootstrap prescribes:
 
 The standard Bootstrap 3 CSS will provide a reasonable styling for this,
 which can either be overwritten, or replaced in your own CSS files.
-
-The default Sass file is: https://github.com/twbs/bootstrap-sass/blob/master/assets/stylesheets/bootstrap/_jumbotron.scss
+The defaults provided by Bootstap 3 is: https://github.com/twbs/bootstrap-sass/blob/master/assets/stylesheets/bootstrap/_jumbotron.scss
 
 Customizing
 -----------
@@ -65,7 +64,7 @@ Centering, adding backgrounds, etc.. all happen by adding CSS lines. For example
 .. code-block:: css
 
     .jumbotron {
-      background: #fff image-url('background.jpg') no-repeat fixed 0 0;
+      background: url('/static/frontend/images/background.jpg') no-repeat fixed 0 0;
       background-size: cover;
       color: #fff;
       text-align: center;
@@ -75,6 +74,7 @@ Centering, adding backgrounds, etc.. all happen by adding CSS lines. For example
       margin-top: 12px;  /* For Sass: $padding-base-vertical * 2; */
     }
 
+When you use Sass, you can also override the Sass variables.
 
 Full page width
 ---------------

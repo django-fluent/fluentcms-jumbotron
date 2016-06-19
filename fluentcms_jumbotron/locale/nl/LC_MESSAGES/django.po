@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-05-14 09:13+0200\n"
+"POT-Creation-Date: 2016-06-19 15:24+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -23,8 +23,8 @@ msgid "Landing page"
 msgstr "Landingspagina"
 
 #: content_plugins.py:21
-msgid "Button"
-msgstr "Knop"
+msgid "Buttons"
+msgstr "Knoppen"
 
 #: models.py:17
 msgid "Title"
@@ -35,13 +35,21 @@ msgid "Content"
 msgstr "Inhoud"
 
 #: models.py:19
-msgid "Button Title"
-msgstr "Knop tekst"
+msgid "Button 1 Title"
+msgstr "Knop 1 tekst"
 
 #: models.py:20
-msgid "Button URL"
-msgstr "Knop URL"
+msgid "Button 1 URL"
+msgstr "Knop 1 URL"
 
-#: models.py:23 models.py:24
+#: models.py:22
+msgid "Button 2 Title"
+msgstr "Knop 2 tekst"
+
+#: models.py:23
+msgid "Button 2 URL"
+msgstr "Knop 2 URL"
+
+#: models.py:26 models.py:27
 msgid "Jumbotron"
 msgstr "Jumbotron"

@@ -52,7 +52,7 @@ The database tables can be created afterwards:
 Frontend styling
 ================
 
-The jumbotron is renderd with the HTML that Bootstrap prescribes:
+The jumbotron is rendered with the HTML that Bootstrap prescribes:
 
 .. code-block:: html+django
 
@@ -65,6 +65,66 @@ The jumbotron is renderd with the HTML that Bootstrap prescribes:
 The standard Bootstrap 3 CSS will provide a reasonable styling for this,
 which can either be overwritten, or replaced in your own CSS files.
 
+The default Sass file is: https://github.com/twbs/bootstrap-sass/blob/master/assets/stylesheets/bootstrap/_jumbotron.scss
+
+Customizing
+-----------
+
+Centering, adding backgrounds, etc.. all happen by adding CSS lines. For example:
+
+.. code-block:: css
+
+    .jumbotron {
+      background: #fff image-url('background.jpg') no-repeat fixed 0 0;
+      background-size: cover;
+      color: #fff;
+      text-align: center;
+    }
+
+    .jumbotron .btn {
+      margin-top: 12px;  /* For Sass: $padding-base-vertical * 2; */
+    }
+
+When you use Sass, you can also override the Sass variables.
+
+Full page width
+---------------
+
+To display the Bootstrap Jumbotron full page, you likely need to break out of the container
+the ``JumbotronPlugin`` is rendered in. For example, when your page looks like:
+
+.. code-block:: html+django
+
+    <div class="container">
+        {% page_placeholder "homepage" title="Homepage" role="m" %}
+    </div>
+
+You can change that into:
+
+.. code-block:: html+django
+
+    <div class="container">
+        {% page_placeholder "homepage" title="Homepage" role="m" template="pages/placeholders/homepage.html" cachable=1 %}
+    </div>
+
+The ``pages/placeholders/homepage.html`` template looks like:
+
+.. code-block:: html+django
+
+    {% for contentitem, html in contentitems %}
+      {% if contentitem.plugin.name == 'JumbotronPlugin' %}
+        </div>
+        {{ html }}
+        <div class="container">
+      {% else %}
+        {{ html }}
+      {% endif %}
+    {% endfor %}
+
+Note the exact HTML tags depend on your frontend HTML layout.
+
+The ``cachable=1`` flag is a promise that the template always returns the same result for every request.
+Otherwise, remove it.
 
 Contributing
 ------------

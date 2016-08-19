@@ -18,8 +18,8 @@ class Migration(migrations.Migration):
                 ('contentitem_ptr', models.OneToOneField(parent_link=True, auto_created=True, primary_key=True, serialize=False, to='fluent_contents.ContentItem')),
                 ('title', models.CharField(max_length=200, verbose_name='Title')),
                 ('content', fluent_contents.extensions.PluginHtmlField(verbose_name='Content')),
-                ('button_title', models.CharField(max_length=200, null=True, verbose_name='Button Title', blank=True)),
-                ('button_url', fluent_contents.extensions.PluginUrlField(max_length=300, null=True, verbose_name='Button URL', blank=True)),
+                ('button_title', models.CharField(max_length=200, null=True, verbose_name='Button 1 Title', blank=True)),
+                ('button_url', fluent_contents.extensions.PluginUrlField(max_length=300, null=True, verbose_name='Button 1 URL', blank=True)),
             ],
             options={
                 'db_table': 'contentitem_fluentcms_jumbotron_jumbotronitem',

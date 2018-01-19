@@ -5,8 +5,6 @@ fluentcms-jumbotron
     :target: http://travis-ci.org/edoburu/fluentcms-jumbotron
 .. image:: https://img.shields.io/pypi/v/fluentcms-jumbotron.svg
     :target: https://pypi.python.org/pypi/fluentcms-jumbotron/
-.. image:: https://img.shields.io/pypi/dm/fluentcms-jumbotron.svg
-    :target: https://pypi.python.org/pypi/fluentcms-jumbotron/
 .. image:: https://img.shields.io/badge/wheel-yes-green.svg
     :target: https://pypi.python.org/pypi/fluentcms-jumbotron/
 .. image:: https://img.shields.io/pypi/l/fluentcms-jumbotron.svg

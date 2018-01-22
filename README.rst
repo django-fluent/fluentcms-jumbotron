@@ -1,16 +1,16 @@
 fluentcms-jumbotron
 ===================
 
-.. image:: https://img.shields.io/travis/edoburu/fluentcms-jumbotron/master.svg?branch=master
-    :target: http://travis-ci.org/edoburu/fluentcms-jumbotron
+.. image:: https://img.shields.io/travis/django-fluent/fluentcms-jumbotron/master.svg?branch=master
+    :target: http://travis-ci.org/django-fluent/fluentcms-jumbotron
 .. image:: https://img.shields.io/pypi/v/fluentcms-jumbotron.svg
     :target: https://pypi.python.org/pypi/fluentcms-jumbotron/
 .. image:: https://img.shields.io/badge/wheel-yes-green.svg
     :target: https://pypi.python.org/pypi/fluentcms-jumbotron/
 .. image:: https://img.shields.io/pypi/l/fluentcms-jumbotron.svg
     :target: https://pypi.python.org/pypi/fluentcms-jumbotron/
-.. image:: https://img.shields.io/codecov/c/github/edoburu/fluentcms-jumbotron/master.svg
-    :target: https://codecov.io/github/edoburu/fluentcms-jumbotron?branch=master
+.. image:: https://img.shields.io/codecov/c/github/django-fluent/fluentcms-jumbotron/master.svg
+    :target: https://codecov.io/github/django-fluent/fluentcms-jumbotron?branch=master
 
 Displaying a Bootstrap 3 Jumbotron_ in a page
 
@@ -129,5 +129,5 @@ Contributing
 If you like this module, forked it, or would like to improve it, please let us know!
 Pull requests are welcome too. :-)
 
-.. _django-fluent-contents: https://github.com/edoburu/django-fluent-contents
+.. _django-fluent-contents: https://github.com/django-fluent/django-fluent-contents
 .. _jumbotron: http://getbootstrap.com/components/#jumbotron

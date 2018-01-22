@@ -15,7 +15,7 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='JumbotronItem',
             fields=[
-                ('contentitem_ptr', models.OneToOneField(parent_link=True, auto_created=True, primary_key=True, serialize=False, to='fluent_contents.ContentItem')),
+                ('contentitem_ptr', models.OneToOneField(parent_link=True, auto_created=True, primary_key=True, serialize=False, to='fluent_contents.ContentItem', on_delete=models.CASCADE)),
                 ('title', models.CharField(max_length=200, verbose_name='Title')),
                 ('content', fluent_contents.extensions.PluginHtmlField(verbose_name='Content')),
                 ('button_title', models.CharField(max_length=200, null=True, verbose_name='Button 1 Title', blank=True)),

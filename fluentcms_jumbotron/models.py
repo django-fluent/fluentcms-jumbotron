@@ -1,14 +1,12 @@
 from django.conf import settings
 from django.db import models
-from django.utils.encoding import python_2_unicode_compatible
 from django.utils.functional import cached_property
-from django.utils.translation import ugettext_lazy as _
+from django.utils.translation import gettext_lazy as _
 
 from fluent_contents.extensions import PluginHtmlField, PluginUrlField
 from fluent_contents.models import ContentItem
 
 
-@python_2_unicode_compatible
 class JumbotronItem(ContentItem):
     """
     Pager item, to show a previous/next page.

@@ -2,7 +2,6 @@ from django.conf import settings
 from django.db import models
 from django.utils.functional import cached_property
 from django.utils.translation import gettext_lazy as _
-
 from fluent_contents.extensions import PluginHtmlField, PluginUrlField
 from fluent_contents.models import ContentItem
 
@@ -12,6 +11,7 @@ class JumbotronItem(ContentItem):
     Pager item, to show a previous/next page.
     The pages are auto determined, but can be overwritten
     """
+
     title = models.CharField(_("Title"), max_length=200)
     content = PluginHtmlField(_("Content"))  # TODO: replace with child elements later?
     button1_title = models.CharField(_("Button 1 Title"), max_length=200, blank=True, null=True)

@@ -1,10 +1,11 @@
-from django.template import Template, Context
-from django.test import TestCase, override_settings, RequestFactory
+from django.template import Context, Template
+from django.test import RequestFactory, TestCase, override_settings
 from django.utils.html import strip_tags
 from django.utils.text import slugify
 from fluent_contents.models import Placeholder
 
 from fluentcms_jumbotron.models import JumbotronItem
+
 from .models import ExamplePage
 
 
@@ -19,7 +20,7 @@ class JumbotronTests(TestCase):
         Factory to create an page
         """
         page = ExamplePage.objects.create(slug=slug)
-        placeholder = Placeholder.objects.create_for_object(page, slot='content')
+        placeholder = Placeholder.objects.create_for_object(page, slot="content")
         JumbotronItem.objects.create_for_placeholder(placeholder, **jumbotron_kwargs)
         return page
 
@@ -28,18 +29,24 @@ class JumbotronTests(TestCase):
         """
         Default jumbotron rendering
         """
-        page1 = self.create_page(slug='page1', title="Hello", content="<p>test</p>", button1_url='http://example.org/', button1_title="GO")
+        page1 = self.create_page(
+            slug="page1",
+            title="Hello",
+            content="<p>test</p>",
+            button1_url="http://example.org/",
+            button1_title="GO",
+        )
 
         template = Template('{% load fluent_contents_tags %}{% page_placeholder "content" %}')
-        request = RequestFactory().get("/", HTTP_HOST='example.org')
+        request = RequestFactory().get("/", HTTP_HOST="example.org")
 
-        html = template.render(Context({'page': page1, 'request': request}))
-        expected = '''<div class="jumbotron">
+        html = template.render(Context({"page": page1, "request": request}))
+        expected = """<div class="jumbotron">
   <div class="container">
     <h1>Hello</h1>
     <p>test</p>
     <p><a class="btn btn-primary btn-lg" href="http://example.org/" role="button">GO</a></p>
   </div>
-</div>'''
-        self.assertEqual(slugify(strip_tags(html)), 'hello-test-go')
+</div>"""
+        self.assertEqual(slugify(strip_tags(html)), "hello-test-go")
         self.assertHTMLEqual(html.strip(), expected)

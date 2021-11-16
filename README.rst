@@ -1,11 +1,9 @@
 fluentcms-jumbotron
 ===================
 
-.. image:: https://img.shields.io/travis/django-fluent/fluentcms-jumbotron/master.svg?branch=master
-    :target: http://travis-ci.org/django-fluent/fluentcms-jumbotron
+.. image:: https://github.com/django-fluent/fluentcms-jumbotron/actions/workflows/tests.yaml/badge.svg?branch=master
+    :target: https://github.com/django-fluent/fluentcms-jumbotron/actions/workflows/tests.yaml
 .. image:: https://img.shields.io/pypi/v/fluentcms-jumbotron.svg
-    :target: https://pypi.python.org/pypi/fluentcms-jumbotron/
-.. image:: https://img.shields.io/badge/wheel-yes-green.svg
     :target: https://pypi.python.org/pypi/fluentcms-jumbotron/
 .. image:: https://img.shields.io/pypi/l/fluentcms-jumbotron.svg
     :target: https://pypi.python.org/pypi/fluentcms-jumbotron/
